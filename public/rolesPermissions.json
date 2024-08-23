@@ -1,0 +1,44 @@
+{
+  "role": [
+    {
+      "name": "user",
+      "permissions": [
+        {
+          "action": "read",
+          "resource": "Document"
+        },
+        {
+"action": "create",
+"resource": "Document"
+        },
+        {
+          "action": "update",
+          "resource": "Article"
+        },
+        {
+          "action": "delete",
+          "resource": "Comment"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "type": "Document",
+      "attributes": ["department", "team"]
+    },
+    {
+      "type": "Article",
+      "attributes": ["category"]
+    },
+    {
+      "type": "Project",
+      "attributes": ["department"]
+    },
+    {
+      "type": "Comment",
+      "attributes": []
+    }
+  ],
+  "actions": ["create", "read", "update", "delete", "manage"]
+}
