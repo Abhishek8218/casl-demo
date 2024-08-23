@@ -4,16 +4,14 @@ export type AppAbility = PureAbility<Abilities, MongoQuery>;
 
 export interface User {
   role: string;
-
 }
-
 export interface RolesPermissions {
   role: {
     name: string;
     permissions: {
       action: string;
       resource: string;
-      conditions?: Record<string, any>;
+      conditions?: Record<string, any>; // Add conditions for attributes
     }[];
   }[];
   resources: {
@@ -22,3 +20,4 @@ export interface RolesPermissions {
   }[];
   actions: string[];
 }
+

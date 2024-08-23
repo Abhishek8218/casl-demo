@@ -1,5 +1,5 @@
 {
-  "role": [
+"role": [
     {
       "name": "user",
       "permissions": [
@@ -8,16 +8,22 @@
           "resource": "Document"
         },
         {
-"action": "create",
-"resource": "Document"
+          "action": "create",
+          "resource": "Document",
+          "conditions": { "userGroup": "Engineering" }
         },
         {
           "action": "update",
-          "resource": "Article"
+          "resource": "Article",
+          "conditions": { "userID":  "user2123" }
         },
         {
           "action": "delete",
           "resource": "Comment"
+        },
+        {
+          "action": "manage",
+          "resource": "Project"
         }
       ]
     }
